@@ -12,17 +12,9 @@ from nuscenes.utils.geometry_utils import view_points
 from pyquaternion import Quaternion
 from shapely.geometry import MultiPoint, box
 
-from mmdet3d.datasets.convert_utils import NuScenesNameMapping
+from mmdet3d.datasets.convert_utils import (NuScenesNameMapping,
+                                            nus_attributes, nus_categories)
 from mmdet3d.structures import points_cam2img
-
-nus_categories = ('car', 'truck', 'trailer', 'bus', 'construction_vehicle',
-                  'bicycle', 'motorcycle', 'pedestrian', 'traffic_cone',
-                  'barrier')
-
-nus_attributes = ('cycle.with_rider', 'cycle.without_rider',
-                  'pedestrian.moving', 'pedestrian.standing',
-                  'pedestrian.sitting_lying_down', 'vehicle.moving',
-                  'vehicle.parked', 'vehicle.stopped', 'None')
 
 
 def create_nuscenes_infos(root_path,

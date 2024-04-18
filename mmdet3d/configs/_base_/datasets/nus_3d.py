@@ -22,7 +22,7 @@ point_cloud_range = [-50, -50, -5, 50, 50, 3]
 # point_cloud_range = [-50, -50.8, -5, 50, 49.2, 3]
 # For nuScenes we usually do 10-class detection
 class_names = [
-    'car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
+    'car', 'truck', 'ambulance', 'bus', 'police', 'bicycle',
     'motorcycle', 'pedestrian', 'traffic_cone', 'barrier'
 ]
 metainfo = dict(classes=class_names)

@@ -57,7 +57,7 @@ class NuScenesDataset(Det3DDataset):
     """
     METAINFO = {
         'classes':
-        ('car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
+        ('car', 'truck', 'ambulance', 'bus', 'police', 'bicycle',
          'motorcycle', 'pedestrian', 'traffic_cone', 'barrier'),
         'version':
         'v1.0-trainval',

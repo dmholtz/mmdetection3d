@@ -18,7 +18,7 @@ kitti_categories = ('Pedestrian', 'Cyclist', 'Car', 'Van', 'Truck',
 
 waymo_categories = ('Car', 'Pedestrian', 'Cyclist')
 
-nus_categories = ('car', 'truck', 'trailer', 'bus', 'construction_vehicle',
+nus_categories = ('car', 'truck', 'ambulance', 'bus', 'police',
                   'bicycle', 'motorcycle', 'pedestrian', 'traffic_cone',
                   'barrier')
 
@@ -40,7 +40,9 @@ NuScenesNameMapping = {
     'human.pedestrian.police_officer': 'pedestrian',
     'movable_object.trafficcone': 'traffic_cone',
     'vehicle.trailer': 'trailer',
-    'vehicle.truck': 'truck'
+    'vehicle.truck': 'truck',
+    'vehicle.emergency.ambulance': 'ambulance',
+    'vehicle.emergency.police': 'police'
 }
 LyftNameMapping = {
     'bicycle': 'bicycle',

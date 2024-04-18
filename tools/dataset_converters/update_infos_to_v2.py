@@ -263,7 +263,7 @@ def update_nuscenes_infos(pkl_path, out_dir):
     data_list = mmengine.load(pkl_path)
     METAINFO = {
         'classes':
-        ('car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
+        ('car', 'truck', 'ambulance', 'bus', 'police', 'bicycle',
          'motorcycle', 'pedestrian', 'traffic_cone', 'barrier'),
     }
     nusc = NuScenes(

@@ -14,7 +14,7 @@ from mmdet3d.visualization.local_visualizer import Det3DLocalVisualizer
 dataset_type = 'NuScenesDataset'
 data_root = 'data/nuscenes/'
 class_names = [
-    'car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
+    'car', 'truck', 'ambulance', 'bus', 'police', 'bicycle',
     'motorcycle', 'pedestrian', 'traffic_cone', 'barrier'
 ]
 metainfo = dict(classes=class_names)
