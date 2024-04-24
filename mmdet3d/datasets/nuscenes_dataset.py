@@ -57,8 +57,8 @@ class NuScenesDataset(Det3DDataset):
     """
     METAINFO = {
         'classes':
-        ('car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
-         'motorcycle', 'pedestrian', 'traffic_cone', 'barrier'),
+        ('car', 'truck', 'ambulance', 'bus', 'bicycle',
+         'motorcycle', 'pedestrian',),
         'version':
         'v1.0-trainval',
         'palette': [
@@ -66,12 +66,9 @@ class NuScenesDataset(Det3DDataset):
             (255, 99, 71),  # Tomato
             (255, 140, 0),  # Darkorange
             (255, 127, 80),  # Coral
-            (233, 150, 70),  # Darksalmon
             (220, 20, 60),  # Crimson
             (255, 61, 99),  # Red
             (0, 0, 230),  # Blue
-            (47, 79, 79),  # Darkslategrey
-            (112, 128, 144),  # Slategrey
         ]
     }
 

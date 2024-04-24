@@ -63,7 +63,9 @@ class NuScenesMetric(BaseMetric):
         'human.pedestrian.police_officer': 'pedestrian',
         'movable_object.trafficcone': 'traffic_cone',
         'vehicle.trailer': 'trailer',
-        'vehicle.truck': 'truck'
+        'vehicle.truck': 'truck',
+        'vehicle.emergency.ambulance': 'ambulance',
+        'vehicle.emergency.police': 'car'
     }
     DefaultAttribute = {
         'car': 'vehicle.parked',
@@ -74,6 +76,8 @@ class NuScenesMetric(BaseMetric):
         'motorcycle': 'cycle.without_rider',
         'construction_vehicle': 'vehicle.parked',
         'bicycle': 'cycle.without_rider',
+        'police': 'vehicle.moving',
+        'ambulance': 'vehicle.moving',
         'barrier': '',
         'traffic_cone': '',
     }
