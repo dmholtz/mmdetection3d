@@ -65,7 +65,9 @@ class NuScenesDataset(Custom3DDataset):
         'human.pedestrian.police_officer': 'pedestrian',
         'movable_object.trafficcone': 'traffic_cone',
         'vehicle.trailer': 'trailer',
-        'vehicle.truck': 'truck'
+        'vehicle.truck': 'truck',
+        'vehicle.emergency.ambulance': 'ambulance',
+        'vehicle.emergency.police': 'car'
     }
     DefaultAttribute = {
         'car': 'vehicle.parked',
@@ -76,6 +78,7 @@ class NuScenesDataset(Custom3DDataset):
         'motorcycle': 'cycle.without_rider',
         'construction_vehicle': 'vehicle.parked',
         'bicycle': 'cycle.without_rider',
+        'ambulance': 'vehicle.moving',
         'barrier': '',
         'traffic_cone': '',
     }
@@ -107,9 +110,8 @@ class NuScenesDataset(Custom3DDataset):
         'vel_err': 'mAVE',
         'attr_err': 'mAAE'
     }
-    CLASSES = ('car', 'truck', 'trailer', 'bus', 'construction_vehicle',
-               'bicycle', 'motorcycle', 'pedestrian', 'traffic_cone',
-               'barrier')
+    CLASSES = ('car', 'truck', 'ambulance', 'bus',
+               'bicycle', 'motorcycle', 'pedestrian')
 
     def __init__(self,
                  ann_file,
@@ -325,10 +327,9 @@ class NuScenesDataset(Custom3DDataset):
                 if np.sqrt(box.velocity[0]**2 + box.velocity[1]**2) > 0.2:
                     if name in [
                             'car',
-                            'construction_vehicle',
                             'bus',
                             'truck',
-                            'trailer',
+                            'ambulance',
                     ]:
                         attr = 'vehicle.moving'
                     elif name in ['bicycle', 'motorcycle']:
